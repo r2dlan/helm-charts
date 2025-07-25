@@ -1,0 +1,41 @@
+apiVersion: v1
+entries:
+  cups:
+  - annotations:
+      artifacthub.io/category: infrastructure
+      artifacthub.io/changes: |
+        - Initial release with basic Deployment, Service, and Secret support
+      artifacthub.io/images: |
+        - name: cups
+          image: docker.io/anujdatar/cups:25.07.01
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Official CUPS documentation
+          url: https://www.cups.org/doc/
+      artifacthub.io/sensitive: |
+        - auth.username
+        - auth.password
+    apiVersion: v2
+    appVersion: 2.4.2
+    created: "2025-07-25T18:20:28.544291+02:00"
+    description: A Helm chart to deploy CUPS (Common UNIX Printing System) as a print
+      server in Kubernetes
+    digest: a6577e54222d650281aa9188e1aef25c25d25d3514728bf0d4f2ee1cf2ad22f7
+    home: https://www.cups.org/
+    keywords:
+    - printing
+    - print-server
+    - cups
+    - ipp
+    - infrastructure
+    maintainers:
+    - email: moin@daniel-andres.com
+      name: Daniel Andres
+    name: cups
+    sources:
+    - https://github.com/OpenPrinting/cups
+    type: application
+    urls:
+    - https://r2dlan.github.io/helm-charts/cups-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-07-25T18:20:28.537308+02:00"
