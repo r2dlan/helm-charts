@@ -7,7 +7,7 @@ appVersion: "2.4.2"
 
 home: https://www.cups.org/
 sources:
-  - https://github.com/OpenPrinting/cups
+  - https://github.com/r2dlan/helm-charts/tree/main/charts/cups
 maintainers:
   - name: Daniel Andres
     email: moin@daniel-andres.com
