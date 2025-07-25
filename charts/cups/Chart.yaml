@@ -17,6 +17,7 @@ keywords:
   - cups
   - ipp
   - infrastructure
+  - networking
 annotations:
   artifacthub.io/license: Apache-2.0
   artifacthub.io/changes: |
@@ -24,7 +25,7 @@ annotations:
   artifacthub.io/images: |
     - name: cups
       image: docker.io/anujdatar/cups:25.07.01
-  artifacthub.io/category: infrastructure
+  artifacthub.io/category: networking
   artifacthub.io/links: |
     - name: Official CUPS documentation
       url: https://www.cups.org/doc/
