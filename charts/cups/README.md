@@ -11,7 +11,6 @@ A Helm chart for deploying [CUPS (Common UNIX Printing System)](https://www.cups
 - Persistent storage support
 - Secret-based authentication with optional auto-generation
 - Configurable environment variables
-- Automatic Pod restart on Secret changes
 
 ---
 
