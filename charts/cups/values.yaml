@@ -1,0 +1,24 @@
+---
+image:
+  repository: anujdatar/cups
+  tag: 25.07.01
+
+auth:
+  username: ""
+  password: ""
+
+extraEnv: {}
+
+service:
+  enabled: true
+  type: ClusterIP
+  annotations: {}
+
+persistence:
+  enabled: false
+  accessMode: ReadWriteOnce
+  size: 200Mi
+  storageClassName: local-path
+
+metrics:
+  enabled: false
