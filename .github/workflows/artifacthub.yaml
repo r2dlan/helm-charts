@@ -34,6 +34,10 @@ jobs:
         run: |
           helm repo index .dist --url https://r2dlan.github.io/helm-charts/
 
+      - name: Move artifacthub-repo.yml to dist directory
+        run: |
+          cp artifacthub-repo.yml .dist/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
