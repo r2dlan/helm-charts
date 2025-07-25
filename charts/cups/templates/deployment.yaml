@@ -1,0 +1,47 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "cups.fullname" . }}
+  labels:
+{{- include "cups.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+{{- include "cups.labels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+{{- include "cups.labels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: cups
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          ports:
+            - containerPort: 631
+          env:
+            - name: CUPSADMIN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "cups.fullname" . }}-auth
+                  key: username
+            - name: CUPSPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "cups.fullname" . }}-auth
+                  key: password
+
+            {{- range $key, $val := .Values.extraEnv }}
+            - name: {{ $key }}
+              value: {{ $val | quote }}
+            {{- end }}
+{{ if .Values.persistence.enabled }}
+          volumeMounts:
+            - name: cups-config
+              mountPath: /etc/cups
+      volumes:
+        - name: cups-config
+          persistentVolumeClaim:
+            claimName: {{ include "cups.fullname" . }}-pvc
+{{- end}}
