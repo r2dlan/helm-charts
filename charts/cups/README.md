@@ -28,14 +28,14 @@ A Helm chart for deploying [CUPS (Common UNIX Printing System)](https://www.cups
 Add your Helm repository (if published):
 
 ```bash
-helm repo add my-charts https://your-user.github.io/helm-charts
+helm repo add r2dlan https://r2dlan.github.io/helm-charts/
 helm repo update
 ```
 
 Install the chart:
 
 ```bash
-helm install my-cups my-charts/cups
+helm install my-cups r2dlan/cups
 ```
 
 Or from local:
