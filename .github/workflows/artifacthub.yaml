@@ -8,7 +8,7 @@ on:
 jobs:
   release:
     name: Build and publish Helm charts
-    runs-on: r2dlan
+    runs-on: r2dlan-runner
 
     permissions:
       contents: write
