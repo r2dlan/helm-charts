@@ -17,7 +17,7 @@ entries:
         - auth.password
     apiVersion: v2
     appVersion: 2.4.2
-    created: "2025-07-25T18:20:28.544291+02:00"
+    created: "2025-07-25T18:24:48.283487+02:00"
     description: A Helm chart to deploy CUPS (Common UNIX Printing System) as a print
       server in Kubernetes
     digest: a6577e54222d650281aa9188e1aef25c25d25d3514728bf0d4f2ee1cf2ad22f7
@@ -38,4 +38,4 @@ entries:
     urls:
     - https://r2dlan.github.io/helm-charts/cups-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-25T18:20:28.537308+02:00"
+generated: "2025-07-25T18:24:48.282974+02:00"
