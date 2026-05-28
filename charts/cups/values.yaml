@@ -1,7 +1,7 @@
 ---
 image:
   repository: anujdatar/cups
-  tag: 25.07.01
+  tag: 26.05.01
 
 auth:
   username: ""
